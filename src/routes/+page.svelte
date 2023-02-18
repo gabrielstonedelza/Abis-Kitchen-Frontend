@@ -2,7 +2,6 @@
 	import { fly } from 'svelte/transition';
 	import Abis from '../assets/images/abis_market.png';
 	import AbisLogo from '../assets/images/edited.png';
-	import FoodList from '../components/FoodList.svelte';
 	import UsCard from '../components/UsCard.svelte';
 	import Footer from '../components/Footer.svelte';
 	import menu from '../assets/images/open-menu.png';
@@ -59,11 +58,6 @@
 		<br />
 		<UsCard />
 		<Footer />
-		<!-- <div class="fixed-menu">
-			<a href="/menu">
-				<img src={menu} alt="" />
-			</a>
-		</div> -->
 	</div>
 </section>
 
