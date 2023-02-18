@@ -8,6 +8,8 @@
 	import SpecialDishes from '../components/SpecialDishes.svelte';
 	import Regular from '../components/Regular.svelte';
 	import menuPdf from '../assets/images/files/menu.pdf';
+	import apple from '../assets/images/apple-app-store.png';
+	import android from '../assets/images/android-playstore.png';
 </script>
 
 <svelte:head>
@@ -57,12 +59,28 @@
 		<h3>Why Choose Us?</h3>
 		<br />
 		<UsCard />
+		<h3>Apps Coming Soon</h3>
+		<div class="coming-soon">
+			<img src={apple} alt="" />
+			<img src={android} alt="" />
+		</div>
 		<Footer />
 	</div>
 </section>
 
 <style lang="scss">
 	.container {
+		.coming-soon {
+			display: flex;
+			justify-content: center;
+			flex-wrap: wrap;
+			padding: 2rem;
+
+			img {
+				width: 300px;
+				height: 100px;
+			}
+		}
 		h3 {
 			text-align: center;
 			padding: 2rem;
@@ -130,32 +148,32 @@
 				}
 			}
 		}
-		.just-menu{
+		.just-menu {
 			h1 {
-			text-align: center;
-			padding: 20px;
-		}
-		p {
-			text-align: center;
-			color: gray;
-			padding-bottom: 20px;
-		}
-		.special-container {
-			padding-bottom: 20px;
-		}
-		.glow {
-			display: flex;
-			padding: 20px;
-			justify-content: center;
-			a {
-				font-size: 25px;
-				color: #fff;
 				text-align: center;
-				-webkit-animation: glow 1s ease-in-out infinite alternate;
-				-moz-animation: glow 1s ease-in-out infinite alternate;
-				animation: glow 1s ease-in-out infinite alternate;
+				padding: 20px;
 			}
-		}
+			p {
+				text-align: center;
+				color: gray;
+				padding-bottom: 20px;
+			}
+			.special-container {
+				padding-bottom: 20px;
+			}
+			.glow {
+				display: flex;
+				padding: 20px;
+				justify-content: center;
+				a {
+					font-size: 25px;
+					color: #fff;
+					text-align: center;
+					-webkit-animation: glow 1s ease-in-out infinite alternate;
+					-moz-animation: glow 1s ease-in-out infinite alternate;
+					animation: glow 1s ease-in-out infinite alternate;
+				}
+			}
 		}
 		.fixed-menu {
 			position: fixed;
