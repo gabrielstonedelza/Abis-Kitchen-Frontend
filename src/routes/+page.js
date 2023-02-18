@@ -1,5 +1,5 @@
 export const load = async ({ fetch }) => {
-    const res = await fetch('https://abiskitchen.xyz/all-food');
+    const res = await fetch('http://127.0.0.1:8000/all-food');
     const data = res.json();
 
     return {

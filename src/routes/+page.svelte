@@ -1,15 +1,16 @@
 <script>
 	import { fly } from 'svelte/transition';
-	export let data;
 	import Abis from '../assets/images/abis_market.png';
 	import AbisLogo from '../assets/images/edited.png';
 	import FoodList from '../components/FoodList.svelte';
 	import UsCard from '../components/UsCard.svelte';
 	import Footer from '../components/Footer.svelte';
 	import menu from '../assets/images/open-menu.png';
-	
-	
+	import SpecialDishes from '../components/SpecialDishes.svelte';
+	import Regular from '../components/Regular.svelte';
+	import menuPdf from '../assets/images/files/menu.pdf';
 </script>
+
 <svelte:head>
 	<title>Abi's | Home</title>
 </svelte:head>
@@ -30,39 +31,53 @@
 			<div class="motto">
 				<h1>Abi's Kitchen</h1>
 				<p class="my-motto">Food you can't resist 😋</p>
-				<a sveltekit:prefetch sveltekit:noscroll href="/menu">Our Menu</a>
+				<!-- <a sveltekit:prefetch sveltekit:noscroll href="/menu">Our Menu</a> -->
 			</div>
 			<div class="side-img">
 				<img src={Abis} alt="abis_market_side_image" />
 			</div>
 		</div>
-		<br>
-		<br>
-		<FoodList data={data} />
-		<br>
+		<br />
+		<br />
+		<div class="just-menu">
+			<h1>Special Menu</h1>
+			<p>Pick from our special and regular menus.</p>
+			<div class="glow" title="download pdf now">
+				<a href={menuPdf} download>Download PDF</a>
+			</div>
+			<div class="special-container">
+				<SpecialDishes />
+				<br />
+			</div>
+			<div class="regular-container">
+				<h1>Regular Menu</h1>
+				<Regular />
+			</div>
+		</div>
+		<br />
 		<h3>Why Choose Us?</h3>
-		<br>
+		<br />
 		<UsCard />
 		<Footer />
-		<div class="fixed-menu">
+		<!-- <div class="fixed-menu">
 			<a href="/menu">
-				<img src={menu} alt="">
+				<img src={menu} alt="" />
 			</a>
-		</div>
+		</div> -->
 	</div>
 </section>
 
 <style lang="scss">
 	.container {
-		h3{
+		h3 {
 			text-align: center;
 			padding: 2rem;
-			font-size:30px;
+			font-size: 30px;
 		}
 		// padding-right: 2rem;
 		// padding-left: 2rem;
 		padding-top: 2rem;
-		
+
 		.title-logo {
 			display: flex;
 			gap: 1rem;
@@ -87,17 +102,17 @@
 				flex-direction: column;
 				justify-content: center;
 				align-items: center;
-				h1{
-					font-size:4rem;
+				h1 {
+					font-size: 4rem;
 					padding-left: 20px;
 				}
-				p{
+				p {
 					color: grey;
 					font-style: italic;
 					padding-bottom: 20px;
 				}
-				a{
-					background-color:#ec2027;
+				a {
+					background-color: #ec2027;
 					color: white;
 					padding-left: 10px;
 					padding-right: 10px;
@@ -107,8 +122,8 @@
 					cursor: pointer;
 					transition: 1s ease;
 					box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
-					&:hover{
-						background-color:#f38822;
+					&:hover {
+						background-color: #f38822;
 					}
 				}
 			}
@@ -116,18 +131,45 @@
 				img {
 					animation: rotation 11s infinite linear;
 					max-width: 50%;
-					
+
 					// display: block;
 				}
 			}
 		}
-		.fixed-menu{
+		.just-menu{
+			h1 {
+			text-align: center;
+			padding: 20px;
+		}
+		p {
+			text-align: center;
+			color: gray;
+			padding-bottom: 20px;
+		}
+		.special-container {
+			padding-bottom: 20px;
+		}
+		.glow {
+			display: flex;
+			padding: 20px;
+			justify-content: center;
+			a {
+				font-size: 25px;
+				color: #fff;
+				text-align: center;
+				-webkit-animation: glow 1s ease-in-out infinite alternate;
+				-moz-animation: glow 1s ease-in-out infinite alternate;
+				animation: glow 1s ease-in-out infinite alternate;
+			}
+		}
+		}
+		.fixed-menu {
 			position: fixed;
 			z-index: 1;
 			top: 410px;
 			right: 10px;
 			overflow: hidden;
-			img{
+			img {
 				// box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
 				width: 50px;
 				height: 50px;
@@ -137,45 +179,57 @@
 	}
 
 	@keyframes rotation {
-	from {
-		transform: rotate(0deg);
+		from {
+			transform: rotate(0deg);
+		}
+		to {
+			transform: rotate(359deg);
+		}
 	}
-	to {
-		transform: rotate(359deg);
+	// media query
+	@media (max-width: 991px) {
 	}
-}
-// media query
-@media (max-width: 991px){}
-@media (max-width: 768px){
-	.container{
-		.motto-food-display{
-			display: flex;
-			justify-content: center;
-			.motto{
-				h1{
-					font-size: 30px;
+	@media (max-width: 768px) {
+		.container {
+			.motto-food-display {
+				display: flex;
+				justify-content: center;
+				.motto {
+					h1 {
+						font-size: 30px;
+					}
 				}
-			}
-			.side-img{
-				display: none;
+				.side-img {
+					display: none;
+				}
 			}
 		}
 	}
-}
-@media (max-width: 500px){
-	.container{
-		.motto-food-display{
-			display: flex;
-			justify-content: center;
-			.motto{
-				h1{
-					font-size: 30px;
+	@media (max-width: 500px) {
+		.container {
+			.motto-food-display {
+				display: flex;
+				justify-content: center;
+				.motto {
+					h1 {
+						font-size: 30px;
+					}
 				}
-			}
-			.side-img{
-				display: none;
+				.side-img {
+					display: none;
+				}
 			}
 		}
 	}
-}
+
+	@-webkit-keyframes glow {
+		from {
+			text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073, 0 0 40px #e60073,
+				0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
+		}
+		to {
+			text-shadow: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #ff4da6,
+				0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
+		}
+	}
 </style>
