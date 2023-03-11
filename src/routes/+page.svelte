@@ -5,11 +5,23 @@
 	import UsCard from '../components/UsCard.svelte';
 	import Footer from '../components/Footer.svelte';
 	import menu from '../assets/images/open-menu.png';
-	import SpecialDishes from '../components/SpecialDishes.svelte';
-	import Regular from '../components/Regular.svelte';
 	import menuPdf from '../assets/images/files/menu.pdf';
 	import apple from '../assets/images/apple-app-store.png';
 	import android from '../assets/images/android-playstore.png';
+	import FoodCard from '../components/FoodCard.svelte';
+	import food1 from "../assets/images/food/1.jpg"
+
+	let imageModal = '';
+	let openModalImage = false;
+
+	function closeModal() {
+		openModalImage = false;
+	}
+	function openModal(src) {
+		openModalImage = true;
+		imageModal = src;
+		// return src;
+	}
 </script>
 
 <svelte:head>
@@ -21,6 +33,14 @@
 	in:fly={{ y: 50, duration: 500, delay: 500 }}
 	out:fly={{ duration: 500 }}
 >
+<!-- {#if openModalImage}
+		<div class="modal" in:fly={{ y: 50, duration: 300, delay: 300 }} out:fly={{ duration: 500 }}>
+			<button on:click={closeModal}>x</button>
+			<div class="modal-content">
+				<img src={imageModal} alt="" />
+			</div>
+		</div>
+	{/if} -->
 	<div class="container">
 		<div class="title-logo">
 			<img src={AbisLogo} alt="" />
@@ -30,30 +50,19 @@
 		<!-- motto and foods -->
 		<div class="motto-food-display">
 			<div class="motto">
-				<h1>Abi's Kitchen</h1>
+				<h1><span class="justabis">Abi's</span> Kitchen</h1>
 				<p class="my-motto">Food you can't resist 😋</p>
 				<!-- <a sveltekit:prefetch sveltekit:noscroll href="/menu">Our Menu</a> -->
 			</div>
-			<div class="side-img">
+			<!-- <div class="side-img">
 				<img src={Abis} alt="abis_market_side_image" />
-			</div>
+			</div> -->
 		</div>
 		<br />
 		<br />
 		<div class="just-menu">
-			<h1>Special Menu</h1>
-			<p>Pick from our special and regular menus.</p>
-			<div class="glow" title="download pdf now">
-				<a href={menuPdf} download>Download PDF</a>
-			</div>
-			<div class="special-container">
-				<SpecialDishes />
-				<br />
-			</div>
-			<div class="regular-container">
-				<h1>Regular Menu</h1>
-				<Regular />
-			</div>
+			<h1>Our Menu</h1>
+			<FoodCard />
 		</div>
 		<br />
 		<h3>Why Choose Us?</h3>
@@ -106,10 +115,13 @@
 		.motto-food-display {
 			// width: 100%;
 			display: grid;
-			grid-template-columns: 50% auto;
+			grid-template-columns: auto;
 			align-items: center;
 			gap: 1rem;
 			.motto {
+				span{
+					color: #ec2027;
+				}
 				display: flex;
 				flex-direction: column;
 				justify-content: center;
