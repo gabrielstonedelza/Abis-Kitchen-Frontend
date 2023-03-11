@@ -78,6 +78,9 @@
 </section>
 
 <style lang="scss">
+	.section-a{
+		background: #d3d3d3;
+	}
 	.container {
 		.coming-soon {
 			display: flex;

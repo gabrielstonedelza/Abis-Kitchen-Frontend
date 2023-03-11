@@ -220,30 +220,30 @@
 <section class="extra">
 	<h2>More</h2>
 	<div class="container">
-		<ol>
+		<ul>
 			<li>Fried Yam 1 Serving = $11.29</li>
 			<li>Fried Plantain 1 Serving = $8.59</li>
 			<li>Fried Plantain 2 Serving = $11.29</li>
-		</ol>
-		<ol>
+		</ul>
+		<ul>
 			<li>Special Goat = $8.50</li>
 			<li>Jerk Chicken Drumsticks = $9.99</li>
 			<li>Tilapia Small = $7.29</li>
-		</ol>
-		<ol>
+		</ul>
+		<ul>
 			<li>Tilapia Medium = $9.29</li>
 			<li>Tilapia Large = $11.29</li>
 			<li>Bowl of Egusi Soup = $13.99</li>
-		</ol>
-		<ol>
+		</ul>
+		<ul>
 			<li>Bowl of Goat Soup = $13.99</li>
 			<li>Bowl of Peanut Butter Soup= $13.99</li>
 			<li>Extra Banku = $3.99</li>
-		</ol>
-		<ol>
+		</ul>
+		<ul>
 			<li>Extra Plantain Fufu = $3.99</li>
 			<li>Extra Pounded Yam = $4.99</li>
-		</ol>
+		</ul>
 	</div>
 </section>
 
@@ -310,17 +310,17 @@
 
         .container{
             display: flex;
-            gap: 2rem;
+            gap: 1rem;
             flex-wrap: wrap;
             justify-content: center;
 
-            ol{
+            ul{
+                list-style-type: none;
                 border-radius: 12px;
-                padding: 2rem;
-                box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+                padding: 1rem;
+                box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
                 li{
                     padding: 1rem;
-                    font-weight: bold;
                 }
             }
         }
