@@ -315,12 +315,14 @@
             justify-content: center;
 
             ul{
+                
+                width: 300px;
                 list-style-type: none;
                 border-radius: 12px;
-                padding: 1rem;
+                padding: 10px;
                 box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
                 li{
-                    padding: 1rem;
+                    padding: 10px;
                 }
             }
         }
