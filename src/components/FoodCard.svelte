@@ -33,7 +33,7 @@
 	<div class="card">
 		<!-- name and details -->
 		<div class="card-name-details">
-			<h2>Fried Yam & Chicken</h2>
+			<h2>Fried Yam & Tilapia</h2>
 			<p>$16.26</p>
 		</div>
 
