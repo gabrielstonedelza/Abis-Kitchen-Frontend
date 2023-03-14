@@ -20,7 +20,7 @@
 	<div class="card">
 		<!-- name and details -->
 		<div class="card-name-details">
-			<h2>Fried Yam & Chicken</h2>
+			<h2>Fried Yam & Turkey Tail(Twofi)</h2>
 			<p>$15.89</p>
 		</div>
 
@@ -112,7 +112,7 @@
 	<div class="card">
 		<!-- name and details -->
 		<div class="card-name-details">
-			<h2>Fufu & Peanut Butter Soup</h2>
+			<h2>Fufu & Chicken Light Soup</h2>
 			<p>$17.89</p>
 		</div>
 
@@ -141,7 +141,7 @@
 	<div class="card">
 		<!-- name and details -->
 		<div class="card-name-details">
-			<h2>Jollof Rice & Chicken</h2>
+			<h2>Jollof Rice & Jerk Chicken</h2>
 			<p>$13.99</p>
 		</div>
 
@@ -218,7 +218,7 @@
 	</div>
 </section>
 <section class="extra">
-	<h2>More</h2>
+	<h2>Sides</h2>
 	<div class="container">
 		<ul>
 			<li>Fried Yam 1 Serving = $11.29</li>

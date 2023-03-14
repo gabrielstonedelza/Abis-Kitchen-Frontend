@@ -15,7 +15,7 @@
 		</div>
 		<div class="box">
 			<img src={calling} alt="phone" />
-			<p>+1(815)905-110</p>
+			<p>+1(815)905-3110</p>
 		</div>
 		<div class="box">
 			<img src={location} alt="location" />
