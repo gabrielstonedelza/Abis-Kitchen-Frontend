@@ -14,6 +14,9 @@
 	import food13 from '../assets/images/food/21.jpg';
 	import food14 from '../assets/images/food/19.jpg';
 	import food15 from '../assets/images/food/24.jpg';
+	import banku from '../assets/images/food/sides/banku.jpg';
+	import drumsticks from '../assets/images/food/sides/drumsticks.jpg';
+	import friedyam from '../assets/images/food/sides/friedyam.jpg';
 </script>
 
 <section class="food-card-container">
@@ -42,19 +45,7 @@
 			<img src={food3} alt="" />
 		</div>
 	</div>
-	<div class="card">
-		<!-- name and details -->
-		<div class="card-name-details">
-			<h2>Fried Plantain</h2>
-			<p>$8.59</p>
-		</div>
 
-		<!-- food poster -->
-
-		<div class="card-poster">
-			<img src={food2} alt="" />
-		</div>
-	</div>
 	<div class="card">
 		<!-- name and details -->
 		<div class="card-name-details">
@@ -66,6 +57,20 @@
 
 		<div class="card-poster">
 			<img src={food4} alt="" />
+		</div>
+	</div>
+
+	<div class="card">
+		<!-- name and details -->
+		<div class="card-name-details">
+			<h2>Fried Plantain & Beans</h2>
+			<p>$14.26</p>
+		</div>
+
+		<!-- food poster -->
+
+		<div class="card-poster">
+			<img src={food14} alt="" />
 		</div>
 	</div>
 </section>
@@ -203,48 +208,64 @@
 			<img src={food13} alt="" />
 		</div>
 	</div>
-	<div class="card">
-		<!-- name and details -->
-		<div class="card-name-details">
-			<h2>Fried Plantain & Beans</h2>
-			<p>$14.26</p>
-		</div>
-
-		<!-- food poster -->
-
-		<div class="card-poster">
-			<img src={food14} alt="" />
-		</div>
-	</div>
 </section>
 <section class="extra">
 	<h2>Sides</h2>
-	<div class="container">
-		<ul>
-			<li>Fried Yam 1 Serving = $11.29</li>
-			<li>Fried Plantain 1 Serving = $8.59</li>
-			<li>Fried Plantain 2 Serving = $11.29</li>
-		</ul>
-		<ul>
-			<li>Special Goat = $8.50</li>
-			<li>Jerk Chicken Drumsticks = $9.99</li>
-			<li>Tilapia Small = $7.29</li>
-		</ul>
-		<ul>
-			<li>Tilapia Medium = $9.29</li>
-			<li>Tilapia Large = $11.29</li>
-			<li>Bowl of Egusi Soup = $13.99</li>
-		</ul>
-		<ul>
-			<li>Bowl of Goat Soup = $13.99</li>
-			<li>Bowl of Peanut Butter Soup= $13.99</li>
-			<li>Extra Banku = $3.99</li>
-		</ul>
-		<ul>
-			<li>Extra Plantain Fufu = $3.99</li>
-			<li>Extra Pounded Yam = $4.99</li>
-		</ul>
-	</div>
+	<section class="food-card-container">
+		<div class="card">
+			<!-- name and details -->
+			<div class="card-name-details">
+				<h2>Fried Yam</h2>
+				<p>1 Serving</p>
+				<p>$11.29</p>
+			</div>
+
+			<!-- food poster -->
+
+			<div class="card-poster">
+				<img src={friedyam} alt="" />
+			</div>
+		</div>
+		<div class="card">
+			<!-- name and details -->
+			<div class="card-name-details">
+				<h2>Jerk Chicken Drumsticks</h2>
+				<p>$9.99</p>
+			</div>
+
+			<!-- food poster -->
+			<div class="card-poster">
+				<img src={drumsticks} alt="" />
+			</div>
+		</div>
+		<div class="card">
+			<!-- name and details -->
+			<div class="card-name-details">
+				<h2>Extra Banku</h2>
+				<p>$3.99</p>
+			</div>
+
+			<!-- food poster -->
+
+			<div class="card-poster">
+				<img src={banku} alt="" />
+			</div>
+		</div>
+		<div class="card">
+			<!-- name and details -->
+			<div class="card-name-details">
+				<h2>Fried Plantain</h2>
+				<p>1 Serving $8.59</p>
+				<p>2 Serving2 $11.29</p>
+			</div>
+
+			<!-- food poster -->
+
+			<div class="card-poster">
+				<img src={food2} alt="" />
+			</div>
+		</div>
+	</section>
 </section>
 
 <style lang="scss">
@@ -296,35 +317,35 @@
 	}
 
 	.extra {
-        padding: 2rem;
-        max-width: 1400px;
-        margin: 0 auto;
-        display:flex;
-        flex-direction: column;
-        gap: 1rem;
-        flex-wrap: wrap;
-        justify-content: center;
-        h2{
-            text-align: center;
-        }
+		padding: 2rem;
+		max-width: 1400px;
+		margin: 0 auto;
+		display: flex;
+		flex-direction: column;
+		gap: 1rem;
+		flex-wrap: wrap;
+		justify-content: center;
+		h2 {
+			text-align: center;
+		}
 
-        .container{
-            display: flex;
-            gap: 1rem;
-            flex-wrap: wrap;
-            justify-content: center;
+		// .container{
+		//     display: flex;
+		//     gap: 1rem;
+		//     flex-wrap: wrap;
+		//     justify-content: center;
 
-            ul{
-                
-                width: 300px;
-                list-style-type: none;
-                border-radius: 12px;
-                padding: 10px;
-                box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
-                li{
-                    padding: 10px;
-                }
-            }
-        }
+		//     ul{
+
+		//         width: 300px;
+		//         list-style-type: none;
+		//         border-radius: 12px;
+		//         padding: 10px;
+		//         box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+		//         li{
+		//             padding: 10px;
+		//         }
+		//     }
+		// }
 	}
 </style>
