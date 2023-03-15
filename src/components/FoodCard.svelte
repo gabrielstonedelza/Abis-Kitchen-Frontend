@@ -255,8 +255,8 @@
 			<!-- name and details -->
 			<div class="card-name-details">
 				<h2>Fried Plantain</h2>
-				<p>1 Serving $8.59</p>
-				<p>2 Serving2 $11.29</p>
+				<p>1 Serving  ($8.59)</p>
+				<p>2 Serving2 ($11.29)</p>
 			</div>
 
 			<!-- food poster -->
